@@ -38,7 +38,6 @@ export const Photopost = () => {
   if (photopostObj.id) {
     return (
       <div className={style.container}>
-        {console.log('hhh')}
         <div className={style.photopostContainer}>
           <PhotoPhotopost
             src={photopostObj.urls.regular}

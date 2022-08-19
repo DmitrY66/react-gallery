@@ -1,0 +1,19 @@
+.like {
+  position: absolute;
+  left: 6px;
+  bottom: 8px;
+  background-color: transparent;
+  background-image: url("./img/like.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  aspect-ratio: 1/1;
+  /* border: 1px solid #ffffff7a; */
+  filter: drop-shadow(0 0 3px #000000);
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px 10px 0;
+}

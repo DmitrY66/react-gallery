@@ -1,0 +1,9 @@
+.close_icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  /* filter: drop-shadow(0 0 2px #000000); */
+}

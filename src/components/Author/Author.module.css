@@ -1,0 +1,21 @@
+.author__link {
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 6px;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.author__photo {
+  width: 32px;
+  height: 32px;
+}
+
+.author__text {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 2px 4px;
+  color: #faebd7c0;
+  background-color: #000000be;
+}

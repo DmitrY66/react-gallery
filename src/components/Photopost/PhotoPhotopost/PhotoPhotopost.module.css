@@ -1,0 +1,4 @@
+.photoBig {
+  height: calc(100vh - 95px);
+  object-fit: cover;
+}

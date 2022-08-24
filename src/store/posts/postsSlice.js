@@ -19,7 +19,8 @@ export const postsSlice = createSlice({
     postsRequestSuccess: (state, action) => {
       state.loading = false;
       state.error = {};
-      state.data = action.payload.data;
+      // state.data = action.payload.data;
+      state.data = [...state.data, ...action.payload.data];
     },
 
     postsRequestError: (state, action) => {

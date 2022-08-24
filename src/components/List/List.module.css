@@ -11,12 +11,13 @@
 
 .end {
   flex-basis: 100%;
-  height: 100px;
   background-color: #282b2a;
+  /* background-color: #65a791; */
 }
 
 .mymasonryContainer {
   width: calc(100% - 60px) ;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 30px;

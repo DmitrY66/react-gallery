@@ -24,11 +24,12 @@ export const postsAsync = ({ page = 1, count = 10 }) => (dispatch, getState) => 
     .then((response) => {
       const data = response;
       console.log('data: ', data);
-      if (urlGetPhotos.href.includes('&page=1')) {
-        dispatch(postsSlice.actions.postsRequestSuccess({ data }));
-      } else {
-        dispatch(postsSlice.actions.postsRequestSuccessAfter({ data }));
-      }
+      // if (urlGetPhotos.href.includes('&page=1')) {
+      //   dispatch(postsSlice.actions.postsRequestSuccess({ data }));
+      // } else {
+      //   dispatch(postsSlice.actions.postsRequestSuccessAfter({ data }));
+      // }
+      dispatch(postsSlice.actions.postsRequestSuccess({ data }));
     })
     .catch((error) => {
       console.error('ошибка в postsAsync (postAction.js)!!!', error);

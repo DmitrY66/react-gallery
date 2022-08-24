@@ -2,9 +2,9 @@ import { tokenSlice } from './tokenSlice';
 import {
   ACCESS_KEY,
   API_URL_TOKEN,
+  HOME_URL,
   REDIRECT_URI,
   SECRET_KEY,
-  // HOME_URL,
 } from '../../api/consts';
 
 
@@ -34,6 +34,7 @@ export const tokenAsync = () => (dispatch) => {
     dispatch(tokenSlice.actions.tokenUpdate({ token }));
   } else if (location.pathname.includes('/auth')) {
     console.log('в адресной строке содержится "/auth" и мы получаем token по "fetch" запросу!!!');
+    history.pushState(null, null, HOME_URL);
 
     fetch(url, { method: 'POST' })
       .then(response => response.json())
@@ -41,6 +42,7 @@ export const tokenAsync = () => (dispatch) => {
         token = data.access_token;
         localStorage.setItem('bearer', token);
         // console.log('token_from_fetch_response: ', token);
+
         dispatch(tokenSlice.actions.tokenUpdate({ token }));
       })
       .catch((error) => {

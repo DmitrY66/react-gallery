@@ -1,6 +1,7 @@
 // ====================================================
 
 export const HOME_URL = 'https://react-gallery-green.vercel.app/';
+// export const HOME_URL = 'http://localhost:3000';
 export const API_URL_AUTH = 'https://unsplash.com/oauth/authorize';
 export const API_URL = 'https://api.unsplash.com';
 export const API_URL_PHOTOS = `${API_URL}/photos`;
@@ -12,6 +13,7 @@ export const ACCESS_KEY = 'UccdW0oXvptQHlb87KuauS3P_-5aRVzL5EgNKV7FP2A';
 export const SECRET_KEY = 'rOR6nwhOirWwen8Q4YwVpTNF2NVVrB7tP7GJNzDOLJA';
 
 export const REDIRECT_URI = 'https://react-gallery-green.vercel.app/auth';
+// export const REDIRECT_URI = 'http://localhost:3000/auth';
 export const RESPONSE_TYPE = 'code';
 export const SCOPE = 'public read_user read_photos write_likes';
 

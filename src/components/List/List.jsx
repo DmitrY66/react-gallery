@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import style from './List.module.css';
 import { Post } from '../Post/Post';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,16 +20,16 @@ export const List = () => {
     if (!posts.length) return;
 
     const observer = new IntersectionObserver((entries) => {
-      if (entries[0].intersectionRatio === 1) return;
+      // if (entries[0].intersectionRatio === 1) return;
       if (entries[0].isIntersecting) {
-        // console.log('entries[0].isIntersecting: ', entries[0]);
+        // console.log('entries[0].isIntersecting: ', entries[0].intersectionRatio);
+
         i += 1;
-        // console.log('i: ', i);
+        console.log('i: ', i);
         dispatch(postsAsync({ page: i, count: 30 }));
-        // console.log('jjjjjjjjjjjjjj');
       }
     }, {
-      rootMargin: '100px',
+      rootMargin: '200px',
     });
 
     observer.observe(endList.current);
@@ -36,6 +37,7 @@ export const List = () => {
     return () => {
       if (endList.current) {
         observer.unobserve(endList.current);
+        console.log('observer.unobserve');
       }
     };
   }, [endList.current]);
@@ -62,11 +64,10 @@ export const List = () => {
               <Post key={`${item.id}${Math.random()}`} postData={item} />
             )))
           }
-          <li className={style.end} ref={endList} />
         </Masonry>
       </div>
+      <li className={style.end} ref={endList} />
       <Outlet />
-      {/* {console.log('загрузился элемент "list"')} */}
     </>
   );
 };
